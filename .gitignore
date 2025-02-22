@@ -25,3 +25,6 @@ dist-ssr
 
 # Bolt directory
 .bolt
+
+# Ignore folder_name directory
+folder_name/
