@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@types/react-router-dom": "^5.3.3",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "framer-motion": "^11.18.2",
@@ -17,12 +18,16 @@
     "nodemailer": "^6.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-intersection-observer": "^9.8.1"
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^9.8.1",
+    "react-router-dom": "^7.2.0",
+    "react-scroll": "^1.9.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.1",
     "@types/react": "^18.3.5",
     "@types/react-dom": "^18.3.0",
+    "@types/react-scroll": "^1.8.10",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.18",
     "eslint": "^9.9.1",

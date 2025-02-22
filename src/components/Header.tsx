@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   return (
@@ -7,9 +7,10 @@ const Header = () => {
         <h1 className="text-3xl font-bold">Muhammed Mujthaba</h1>
         <nav>
           <ul className="flex space-x-4">
-            <li><a href="#home" className="hover:text-blue-400">Home</a></li>
-            <li><a href="#projects" className="hover:text-blue-400">Projects</a></li>
-            <li><a href="#contact" className="hover:text-blue-400">Contact</a></li>
+            <li><Link to="Hero" smooth={true} duration={500} className="hover:text-blue-400 cursor-pointer">Home</Link></li>
+            <li><Link to="about-me" smooth={true} duration={500} className="hover:text-blue-400 cursor-pointer">Experience</Link></li>
+            <li><Link to="projects" smooth={true} duration={500} className="hover:text-blue-400 cursor-pointer">Projects</Link></li>
+            <li><Link to="contact" smooth={true} duration={500} className="hover:text-blue-400 cursor-pointer">Contact</Link></li>
           </ul>
         </nav>
       </div>
@@ -18,3 +19,7 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
+

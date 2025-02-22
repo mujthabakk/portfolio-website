@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Mail, Phone, Github, Linkedin } from 'lucide-react';
-// import Header from './Header'; // Import the Header component
 
 const Contact = () => {
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -46,7 +45,7 @@ const Contact = () => {
   return (
     <>
       {/* <Header /> Add the Header component */}
-      <section id="contact" className="py-20 bg-gray-800">
+      <section id="contact" className="py-20 bg-gray-900 text-white">
         <div className="container mx-auto px-4">
           <motion.div
             ref={ref}

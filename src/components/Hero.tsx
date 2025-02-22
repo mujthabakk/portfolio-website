@@ -7,7 +7,6 @@ const Hero = () => {
     <>
       <Header />
       <div className="relative min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white flex items-center">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDYwIEwgNjAgMCIgc3Ryb2tlPSJyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuMSkiIHN0cm9rZS13aWR0aD0iMC41Ii8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20"></div>
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <motion.div 
@@ -21,7 +20,11 @@ const Hero = () => {
               <p className="text-gray-300 text-lg leading-relaxed">
                 A highly skilled Flutter Developer specializing in cross-platform mobile app development for Android, iOS, and Web. Experienced in Flutter, Firebase, GetX, Riverpod, Bloc, Provider, REST APIs, Django, App Store, Play Store, CI/CD and UI/UX design.
               </p>
+              <p className="text-gray-300 text-lg leading-relaxed">
+                Passionate about creating seamless user experiences and delivering high-quality applications. Let's work together to bring your ideas to life!
+              </p>
               <div className="flex flex-wrap gap-4">
+                {/* ✅ Fixed Download Resume Button */}
                 <motion.a 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -33,7 +36,19 @@ const Hero = () => {
                   <Download size={20} />
                   Download Resume
                 </motion.a>
+
+                {/* ✅ Fixed Contact Me Button */}
+                <motion.button 
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-semibold transition-colors cursor-pointer"
+                  onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+                >
+                  Contact Me
+                </motion.button>
               </div>
+
+              {/* ✅ Fixed Social Media Links */}
               <div className="flex gap-6">
                 <a href="tel:+918113853193" className="text-gray-400 hover:text-white transition-colors">
                   <Phone size={24} />
@@ -49,13 +64,14 @@ const Hero = () => {
                 </a>
               </div>
             </motion.div>
+
             <motion.div 
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
               className="flex-1 flex justify-center"
             >
-              <div className="relative w-72 h-72 md:w-80 md:h-80">
+              <div className="relative w-80 h-80 md:w-96 md:h-96">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-3xl opacity-20"></div>
                 <motion.img 
                   initial={{ opacity: 0, scale: 0.5 }}
@@ -67,8 +83,6 @@ const Hero = () => {
                 />
               </div>
             </motion.div>
-          </div>
-          <div className="mt-12">
           </div>
         </div>
       </div>
